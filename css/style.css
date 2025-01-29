@@ -1,0 +1,221 @@
+@font-face {
+    font-family: Inter;
+    src: url(../font/Inter_18pt-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Inter;
+}
+
+nav {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #121213;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.logo:hover{
+    color: #ffd700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 420px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 a {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+}
+#books{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 40px 70px 70px 70px;
+}
+.category-button {
+    background-color: #000;
+    color: #ffd700; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.delete-button{
+    margin-top: 5px;
+    background-color: #000;
+    color: #ffd700; 
+    border: none;
+    border-radius: 5px;
+    padding: 8px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.category-button:hover {
+    background-color: #ffd700;
+    color: #000; 
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+    transform: scale(1.1); 
+}
+#categories{
+    margin: 30px 0 30px 70px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+#form {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin-left: 70px;
+}
+
+input[type="text"],
+select {
+    background-color: #252525;
+    border: 1px solid #FFD700;
+    padding: 10px;
+    border-radius: 5px;
+    color: #FFD700;
+    outline: none;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #FFA500;
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.7);
+}
+input[type="submit"] {
+    background-color: #FFD700;
+    color: #121212;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+input[type="submit"]:hover {
+    background-color: #FFA500;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.7);
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 200px;
+}
+
+.input-container label {
+    font-size: 14px;
+    color: #555;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.input-container input:focus {
+    border-color: #FFD700;
+    box-shadow: 0 0 5px #ffd900ad;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 12px;
+    font-size: 12px;
+    color: black;
+    background: #f3f4f6;
+    padding: 0 4px;
+}
